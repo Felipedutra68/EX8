@@ -1,7 +1,7 @@
 package EX8;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Scanner;
 
 /**
  *
@@ -11,28 +11,31 @@ public class Remover11 {
 
     public static void main(String[] args) {
 
+        Scanner teclado = new Scanner(System.in);
+
         ArrayList<Integer> listaDeNomes = new ArrayList<>();
 
-        listaDeNomes.add(1);
-        listaDeNomes.add(2);
-        listaDeNomes.add(2);
-        listaDeNomes.add(4);
-        listaDeNomes.add(5);
-        listaDeNomes.add(6);
-        listaDeNomes.add(7);
-        listaDeNomes.add(7);
-        listaDeNomes.add(9);
-        listaDeNomes.add(10);
+        int n1 = 0;
+        for (int i = 0; i < 10; i++) {
 
-        
-        
-         
-        if (listaDeNomes != listaDeNomes) {
+            System.out.println("Digite um numero");
+            n1 = teclado.nextInt();
 
+            if (!listaDeNomes.contains(n1)) {
 
-             System.out.println(listaDeNomes);
+                listaDeNomes.add(n1);
             
+            }
+
         }
 
+         for ( Integer nome2 : listaDeNomes) {
+
+            System.out.println(nome2);
+
+        }
+        
+        
     }
+
 }
